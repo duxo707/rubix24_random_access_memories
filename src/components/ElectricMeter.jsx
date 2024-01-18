@@ -14,8 +14,12 @@ const ElectricMeter = () => {
     useEffect(() => {
         // Simulating real-time updates to energy consumption every second
         const energyInterval = setInterval(() => {
-            setEnergyConsumed((prevEnergy) => prevEnergy + Math.random() * 10);
-        }, 1000);
+            setEnergyConsumed((prevEnergy) => {
+                const randomEnergy = Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
+                return randomEnergy;
+            });
+        }, 3600000);
+        
 
         // Fetch current date and time
         const updateDateTime = () => {
@@ -101,13 +105,13 @@ const ElectricMeter = () => {
                         overflow: 'hidden',
                     }}
                 >
-                {/* <div className="wire red"></div>
+                    {/* <div className="wire red"></div>
                 <div className="wire yellow"></div>
                 <div className="wire blue"></div>
                 <div className="wire green"></div> */}
 
-                {/* Move energy consumed count inside the meter box */}
-                <div
+                    {/* Move energy consumed count inside the meter box */}
+                    <div
                         className="energy-display absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center"
                         style={{
                             color: '#fff',
@@ -131,10 +135,10 @@ const ElectricMeter = () => {
                         className="bg-[#150b25] rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col text-[#ede1be]"
                     >
                         <FontAwesomeIcon
-    icon={faSun}
-    className="mb-2 text-white"
-    style={{ width: '50px', height: '50px' }}
-/>
+                            icon={faSun}
+                            className="mb-2 text-white"
+                            style={{ width: '50px', height: '50px' }}
+                        />
 
                         <p>27°C</p>
                         <p>SUNNY</p>
