@@ -11,8 +11,8 @@ const Hero = () => {
           <div className="w-1 sm:h-80 h-40 bg-gradient-to-tl from-[#EEE2DC] to-primary" />
         </div>
         <div>
-          <h1 className={`${styles.heroHeadText} mt-5 text-[#000000]`}>SmartFlow<br /><span className="text-[#444444] ">Energy</span></h1>
-          <p className={`${styles.heroSubText} mt-2 text-[#000000]`}>
+          <h1 className={`${styles.heroHeadText} mt-5 text-[#150b25]`}>SmartFlow<br /><span className="text-[#444444] ">Energy</span></h1>
+          <p className={`${styles.heroSubText} mt-2 text-[#150b25]`}>
           Illuminating the Future<br /> of Sustainable Power.
           </p>
         </div>
