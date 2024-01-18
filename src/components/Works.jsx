@@ -12,9 +12,10 @@ const ProjectCard = ({
   index,
   name,
   description,
-  tags,
+  count,
+  // tags,
   image,
-  source_code_link,
+  // source_code_link,
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -24,7 +25,7 @@ const ProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className='bg-[#111111] p-5 rounded-2xl sm:w-[360px] w-full
+        className='bg-[#0C001E] p-5 rounded-2xl sm:w-[360px] w-full
           '
       >
         <div className='relative w-full h-[230px]'>
@@ -34,27 +35,28 @@ const ProjectCard = ({
             className='w-full h-full object-cover rounded-2xl'
           />
 
-          <div className='absolute inset-0 flex justify-end m-3 card-img_hover gap-2'>
+          {/* <div className='absolute inset-0 flex justify-end m-3 card-img_hover gap-2'>
             <div
-              onClick={() => window.open(source_code_link, "_blank")}
+              // onClick={() => window.open(source_code_link, "_blank")}
               className='black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer'
             >
-              <img
+              {/* <img
                 src={reactjs}
                 alt='source code'
                 className='w-1/2 h-1/2 object-contain'
-              />
-            </div>
+              /> */}
+            {/* </div> */}
             
-          </div>
+          {/* </div> */} 
         </div>
 
         <div className='mt-5'>
           <h3 className='text-[#ede1be] font-bold text-[24px]'>{name}</h3>
+          <h4 className='text-[#ede1be] font-bold text-[24px]'>{count}</h4>
           <p className='mt-2 text-secondary text-[14px]'>{description}</p>
         </div>
 
-        <div className='mt-4 flex flex-wrap gap-2'>
+        {/* <div className='mt-4 flex flex-wrap gap-2'>
           {tags.map((tag) => (
             <p
               key={`${name}-${tag.name}`}
@@ -63,7 +65,7 @@ const ProjectCard = ({
               #{tag.name}
             </p>
           ))}
-        </div>
+        </div> */}
       </Tilt>
     </motion.div>
   );
@@ -73,8 +75,8 @@ const Works = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={`sm:text-[22px] text-[14px] uppercase tracking-wider text-[#575349] `}>My work</p>
-        <h2 className={`${styles.sectionHeadText}`}>Projects.</h2>
+        {/* <p className={`sm:text-[22px] text-[14px] uppercase tracking-wider text-[#575349] `}>Our Predictions</p> */}
+        <h2 className={`${styles.sectionHeadText}`}>Our Predictions</h2>
       </motion.div>
 
       <div className='w-full flex'>
@@ -82,10 +84,7 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className='mt-3 text-[#575349] text-[20px] max-w-4xl leading-[30px]'
         >
-          Following projects showcases my skills and experience . Each project is briefly described with
-          links to live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
+          Energy Prediction from different renewable resources
         </motion.p>
       </div>
 
